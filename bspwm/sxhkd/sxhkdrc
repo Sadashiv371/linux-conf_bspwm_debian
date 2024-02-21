@@ -4,7 +4,8 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	/usr/bin/kitty
+
 
 # program launcher
 super + d
@@ -124,11 +125,11 @@ super + {Left,Down,Up,Right}
 
 #Volume Control
 XF86AudioLowerVolume
-	pulseaudio set Master 5%-
+	pactl set-sink-volume 0 -3%
 XF86AudioRaiseVolume
-	pulseaudio set Master 5%+
+	pactl set-sink-volume 0 +3%
 XF86AudioMute
-        pulseaudio set Master toggle
+        pactl set-sink-mute 0 true
 
 
 # Print screen
@@ -141,6 +142,11 @@ super + Print
     notify-send --urgency=low --hint=string:x-dunst-stack-tag:scrot 'Screenshot taken' 'Fullscreen'
 
 
-# Brightness
-{XF86MonBrightnessup,XF86MonBrightnessdown}
-    brightnessctl -set 355{+,-}
+
+#brightnessUP
+
+XF86MonBrightnessUP
+	 brillo -A 5
+#brightnessUP
+XF86MonBrightnessDown
+	 brillo -U 5
