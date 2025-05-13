@@ -146,7 +146,7 @@ super + Print
 #brightnessUP
 
 XF86MonBrightnessUP
-	 brillo -A 5
+	 sudo brillo -A 5
 #brightnessUP
 XF86MonBrightnessDown
-	 brillo -U 5
+	sudo  brillo -U 5

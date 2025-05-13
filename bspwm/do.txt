@@ -1,0 +1,25 @@
+{brightness manager}
+git clone https://github.com/CameronNemo/brillo.git
+cd brillo/
+sudo make install
+
+{wifi name display}
+
+go to .config/polybar/config.ini
+in module walan change the 'interface' from "wlan" to "wlp0s20f3"(or name displayed in ifconfig, laptop adapter interface name) 
+
+
+
+{install hack nerd fonts in system}
+
+
+
+{changing wallpaper}
+
+install feh [feh --bg-fill 'path/to/image.jpg' ]
+install and use pipx to use pywal and scapy
+
+{screen shot}
+sudo apt install scrot
+
+
